@@ -17,6 +17,7 @@ document.onkeyup = function (event) {
         wins++;
         guessesLeft = 10;
         usedLetters = Array();
+        rightAnswer = possibleAnswers[Math.floor(Math.random()*possibleAnswers.length)];
     }
     if (! rightAnswer.includes(guess) && guessesLeft <= 0) {
         losses++
@@ -28,7 +29,5 @@ document.onkeyup = function (event) {
     document.getElementById("guesses-left").innerHTML = " " + guessesLeft;  
     document.getElementById("wins").innerHTML = wins; 
     document.getElementById("losses").innerHTML = losses;
-    document.getElementById("right-answer").innerHTML = rightAnswer;
-
 };
 
